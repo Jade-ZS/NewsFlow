@@ -1,0 +1,12 @@
+.search-bar {
+  display: flex;
+}
+
+.search-button {
+  background:#B3311C;
+  color: white;
+}
+
+.search-input {
+  background: grey;
+}
