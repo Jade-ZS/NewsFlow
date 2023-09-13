@@ -4,16 +4,25 @@
   justify-content: center;
   align-items: center;
   width: 20rem;
+  height: 25rem;
   border: 1px solid #3B6C68;
   border-radius: 20px;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.article-card:hover {
+  transform: scale(1.05); 
+  background: #3d6d6824;
 }
 
 .cover-img {
   width: 18rem;
   height: 10rem;
+  border-radius: 20px;
+  border: solid 2px white;
   object-fit: cover;
 }
 
@@ -32,3 +41,6 @@
   bottom: 0.5rem;
   right: 1rem;
 }
+
+
+

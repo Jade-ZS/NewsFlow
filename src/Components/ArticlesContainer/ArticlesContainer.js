@@ -2,6 +2,7 @@ import './ArticlesContainer.css';
 import newsData from '../../newsData.json';
 import ArticleCard from '../ArticleCard/ArticleCard';
 import {v4 as uuid} from 'uuid';
+import { Link } from 'react-router-dom';
 
 export default function ArticlesContainer() {
   const articles = newsData.articles;
@@ -9,6 +10,7 @@ export default function ArticlesContainer() {
     const {urlToImage, title, description, publishedAt} = article;
     const id = uuid();
     return (
+      <Link to={id}>
       <ArticleCard 
         key={id}
         id={id}
@@ -18,6 +20,7 @@ export default function ArticlesContainer() {
         date={publishedAt}
         article={article}
       />
+      </Link>
     );
   }
   );

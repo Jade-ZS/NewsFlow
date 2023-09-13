@@ -6,3 +6,10 @@
   margin: 2rem;
 }
 
+.article-cards-container a {
+  text-decoration: none;
+  color: black;
+}
+
+
+

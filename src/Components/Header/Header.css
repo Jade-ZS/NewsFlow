@@ -11,6 +11,12 @@ header {
   color: white;
   position: absolute;
   left: 2rem;
+  top: 0;
+  margin-top: 0.8rem;
+}
+
+.app-title:hover {
+  text-decoration: underline overline ;
 }
 
 /* Search Bar */
