@@ -1,33 +1,23 @@
-import './ArticlesContainer.css';
-import newsData from '../../newsData.json';
-import ArticleCard from '../ArticleCard/ArticleCard';
-import {v4 as uuid} from 'uuid';
-import { Link } from 'react-router-dom';
+import "./ArticlesContainer.css";
+import ArticleCard from "../ArticleCard/ArticleCard";
+import { Link } from "react-router-dom";
 
-export default function ArticlesContainer() {
-  const articles = newsData.articles;
-  const articleCards = articles.map(article => {
-    const {urlToImage, title, description, publishedAt} = article;
-    const id = uuid();
+export default function ArticlesContainer({ articles }) {
+  const articleCards = articles.map((article) => {
+    const { urlToImage, title, description, publishedAt, id } = article;
     return (
-      <Link to={id}>
-      <ArticleCard 
-        key={id}
-        id={id}
-        description={description}
-        title={title}
-        imgSrc={urlToImage}
-        date={publishedAt}
-        article={article}
-      />
+      <Link to={id} key={id}>
+        <ArticleCard
+          id={id}
+          description={description}
+          title={title}
+          imgSrc={urlToImage}
+          date={publishedAt}
+          article={article}
+        />
       </Link>
     );
-  }
-  );
+  });
 
-  return (
-    <div className='article-cards-container'>
-      {articleCards}
-    </div>
-  );
+  return <div className="article-cards-container">{articleCards}</div>;
 }

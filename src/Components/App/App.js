@@ -3,15 +3,19 @@ import Header from '../Header/Header';
 import ArticlesContainer from '../ArticlesContainer/ArticlesContainer';
 import ArticleView from '../ArticleView/ArticleView';
 import { Route, Routes } from 'react-router-dom';
+import newsData from '../../newsData.json';
+import {v4 as uuid} from 'uuid';
 
 function App() {
+  let articles = newsData.articles.map(article => {return {...article, id: uuid()}});
+
   return (
     <div className="App">
       <Header />
       <Routes>
       <Route path='/'>
-        <Route index  element={<ArticlesContainer />} />
-        <Route path=':id' element={<ArticleView/>}/>
+        <Route index  element={<ArticlesContainer articles={articles}/>} />
+        <Route path=':id' element={<ArticleView articles={articles}/>}/>
       </Route>
 
       </Routes>
