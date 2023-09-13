@@ -1,6 +1,6 @@
 import './ArticleCard.css';
 
-export default function ArticleCard({imgSrc, title, description, date, article, id}) {
+export default function ArticleCard({imgSrc, title, description, date, article}) {
   const localDate = new Date(date).toString().split(' ');
   const timeZone = `${localDate[6][1]}${localDate[7][0]}${localDate[8][0]}`;
   localDate.splice(5, 4, timeZone);
