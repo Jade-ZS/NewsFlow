@@ -4,5 +4,13 @@
   justify-content: center;
   gap: 3rem;
   margin: 2rem;
+  padding-top: 4rem;
 }
+
+.article-cards-container a {
+  text-decoration: none;
+  color: black;
+}
+
+
 

@@ -5,12 +5,21 @@ header {
   background: #36635f;
   width: 100vw;
   height: 4rem;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
 .app-title {
   color: white;
   position: absolute;
   left: 2rem;
+  top: 0;
+  margin-top: 0.8rem;
+}
+
+.app-title:hover {
+  text-decoration: underline overline ;
 }
 
 /* Search Bar */
