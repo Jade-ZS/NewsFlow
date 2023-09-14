@@ -10,7 +10,7 @@ export default function Header() {
       <div className="search-bar">
         <input
           className="search-input"
-          placeholder="Search article by headline"
+          placeholder="Search by headline"
         />
         <button className="search-button">SEARCH</button>
       </div>

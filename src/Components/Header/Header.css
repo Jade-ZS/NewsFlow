@@ -3,7 +3,7 @@ header {
   justify-content: center;
   align-items: center;
   background: #36635f;
-  width: 100vw;
+  width: 110vw;
   height: 4rem;
   position: fixed;
   top: 0;
@@ -22,7 +22,6 @@ header {
   text-decoration: underline overline ;
 }
 
-/* Search Bar */
 .search-bar {
   display: flex;
   height: 2.5rem;
@@ -45,3 +44,23 @@ header {
   outline: none;
 }
 
+@media (orientation: portrait) {
+  .header {
+    justify-content: flex-end;
+  }
+
+  .search-bar {
+    width: 80vw;
+    margin-left: 10rem;
+  }
+
+  .search-input {
+    width: 30vw;
+  }
+
+  .app-title {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    /* left: 1rem; */
+  }
+}
