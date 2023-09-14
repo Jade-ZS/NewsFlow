@@ -4,9 +4,13 @@ import { useState } from 'react';
 
 export default function Header() {
   const [searchInput, setSearchInput] = useState('');
-  const [searchParam, setSearchParam] = useSearchParams();
+  const [, setSearchParam] = useSearchParams();
   
   const handleSearch = () => {
+    if (!searchInput.length) {
+      alert('This field cannot be empty');
+      return;
+    }
     setSearchParam({'search': searchInput});
   }
 
