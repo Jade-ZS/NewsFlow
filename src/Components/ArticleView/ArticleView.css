@@ -9,12 +9,12 @@
 .article-view img {
   width: 60%;
   border-radius: 20px;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .title {
   text-align: center;
-  width: 50%;
+  width: 60%;
 }
 .description {
   font-style: italic;

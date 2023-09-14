@@ -1,14 +1,10 @@
 import './ArticleCard.css';
 
-export default function ArticleCard({imgSrc, title, description, date, article}) {
-  const localDate = new Date(date).toString().split(' ');
-  const timeZone = `${localDate[6][1]}${localDate[7][0]}${localDate[8][0]}`;
-  localDate.splice(5, 4, timeZone);
-  const formatDate = `${localDate[0]}, ${localDate[1]} ${localDate[2]}, ${localDate[3]}, ${localDate[4]} ${localDate[5]}`;
-
+export default function ArticleCard({article}) {
+  const {urlToImage, title, description, formatDate} = article;
   return (
     <div className='article-card'>
-      <img className='cover-img' alt='News Cover' src={imgSrc}/>
+      <img className='cover-img' alt='News Cover' src={urlToImage}/>
         <h1>{title}</h1>
       <p>{description}</p>
       <p className='date-text'>{formatDate}</p>
