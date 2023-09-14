@@ -1,4 +1,19 @@
+.article-view-container {
+  position: relative;
+}
+
+.blue-circle {
+  position: absolute;
+  width: 100%;
+  height: 30rem;
+  background: #759dbad2;
+  z-index: 1;
+  border-radius: 0 0 200rem 200rem;
+}
+
 .article-view {
+  z-index: 2;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
