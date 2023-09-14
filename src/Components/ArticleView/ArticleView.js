@@ -7,7 +7,7 @@ export default function ArticleView({articles}) {
   const {source, author, title, description, url, urlToImage, publishedAt, content} = article;
   return (
     <div className='article-view'>
-      <h1>{title}</h1>
+      <h1 className='title'>{title}</h1>
       <img src={urlToImage} alt='Cover'/>
       <a href={url}>source</a>
       <p>{author}</p>
