@@ -14,6 +14,7 @@ export default function ArticleView({ articles }) {
     formatDate,
     content,
   } = article;
+
   return (
     <div className="article-view">
       <h1 className="title">{title}</h1>
@@ -26,7 +27,9 @@ export default function ArticleView({ articles }) {
       <p className="description">{description}</p>
       <p className="content">{content}</p>
       <button className="source-button">
-        <a href={url}>read the full article at {source.name}</a>
+        <a href={url}>
+          <p className="button-text">read the full article at {source.name}</p>
+        </a>
       </button>
     </div>
   );
