@@ -4,18 +4,48 @@
   justify-content: center;
   align-items: center;
   padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 
 .article-view img {
-  width: 60%;
   border-radius: 20px;
-  margin-top: 3rem;
+}
+
+.article-view a {
+  text-decoration: none;
+  color: black;
 }
 
 .title {
   text-align: center;
-  width: 60%;
 }
+
 .description {
   font-style: italic;
 }
+
+.content,
+.description,
+.title,
+.article-view img {
+  width: 60%;
+}
+
+.writer-info {
+  display: flex;
+  gap: 1rem;
+  color: #3e3d3d;
+}
+
+.source-button {
+  height: 2rem;
+  width: 60%;
+  border: none;
+}
+
+.source-button:hover {
+  background:#36635f33;
+}
+
+
+
