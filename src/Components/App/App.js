@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "../Header/Header";
 import ArticlesContainer from "../ArticlesContainer/ArticlesContainer";
 import ArticleView from "../ArticleView/ArticleView";
+import ErrorDisplay from "../ErrorDisplay/ErrorDisplay";
 import { Route, Routes } from "react-router-dom";
 import newsData from "../../newsData.json";
 
@@ -26,6 +27,7 @@ function App() {
           <Route index element={<ArticlesContainer articles={articles} />} />
           <Route path=":id" element={<ArticleView articles={articles} />} />
         </Route>
+        <Route path="*" element={<ErrorDisplay />} />
       </Routes>
     </div>
   );
