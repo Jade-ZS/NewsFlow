@@ -12,6 +12,7 @@ export default function Header() {
       return;
     }
     setSearchParam({'search': searchInput});
+    setSearchInput('');
   }
 
   return (
@@ -24,6 +25,7 @@ export default function Header() {
           className="search-input"
           placeholder="Search article by headline"
           onChange={e => setSearchInput(e.target.value)}
+          value={searchInput}
         />
         <button className="search-button" onClick={handleSearch}>SEARCH</button>
       </div>
