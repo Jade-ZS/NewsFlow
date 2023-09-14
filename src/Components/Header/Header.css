@@ -5,6 +5,9 @@ header {
   background: #36635f;
   width: 100vw;
   height: 4rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
 
 .app-title {

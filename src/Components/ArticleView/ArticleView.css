@@ -1,0 +1,10 @@
+.article-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-view img {
+  height: 40rem;
+}

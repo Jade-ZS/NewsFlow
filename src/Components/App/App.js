@@ -5,10 +5,10 @@ import ArticleView from '../ArticleView/ArticleView';
 import { Route, Routes } from 'react-router-dom';
 import newsData from '../../newsData.json';
 import {v4 as uuid} from 'uuid';
-import { useState } from 'react'
+// import { useState } from 'react'
 
 function App() {
-  let articles = newsData.articles.map(article => {return {...article, id: uuid()}});
+  let articles = newsData.articles.map(article => {return {...article, id: `${article.publishedAt}-${article.title.split(' ').join('-')}`}});
 
   return (
     <div className="App">
