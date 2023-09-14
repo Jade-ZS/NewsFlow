@@ -2,13 +2,24 @@ import "./App.css";
 import Header from "../Header/Header";
 import ArticlesContainer from "../ArticlesContainer/ArticlesContainer";
 import ArticleView from "../ArticleView/ArticleView";
+import ErrorDisplay from "../ErrorDisplay/ErrorDisplay";
 import { Route, Routes } from "react-router-dom";
-import newsData from "../../newsData.json";
-import { v4 as uuid } from "uuid";
-// import { useState } from 'react'
+import getData from '../../apiCalls';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
-  let articles = newsData.articles.map((article) => {
+  const [articles, setArticles] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    getData()
+    .then(data => data.articles.filter(article => !Object.values(article).includes(null)))
+    .then(data => setArticles(formatArticles(data)))
+    .catch(() => navigate('*'))
+  }, [])
+
+  const formatArticles = (newsData) => newsData.map((article) => {
     const localDate = new Date(article.publishedAt).toString().split(" ");
     const timeZone = `${localDate[6][1]}${localDate[7][0]}${localDate[8][0]}`;
     localDate.splice(5, 4, timeZone);
@@ -28,6 +39,7 @@ function App() {
           <Route index element={<ArticlesContainer articles={articles} />} />
           <Route path=":id" element={<ArticleView articles={articles} />} />
         </Route>
+        <Route path="*" element={<ErrorDisplay />} />
       </Routes>
     </div>
   );
