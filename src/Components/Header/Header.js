@@ -20,7 +20,7 @@ export default function Header() {
       <Link to='/'>
         <h1 className='app-title'>NewsFlow</h1>
       </Link>
-      <img className='menu-icon' src={require('../../Assets/menu.png')}/>
+      <img className='menu-icon'  src={require('../../Assets/menu.png')}/>
       <div className="search-bar">
         <input
           className="search-input"

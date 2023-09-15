@@ -46,6 +46,7 @@ header {
 
 .menu-icon {
   height: 2rem;
+  display: none;
 }
 
 @media (orientation: portrait) {
@@ -65,5 +66,13 @@ header {
   .app-title {
     font-size: 1.4rem;
     margin-top: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .search-bar {
+    display: none;
   }
 }
