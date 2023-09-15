@@ -3,7 +3,7 @@ header {
   justify-content: center;
   align-items: center;
   background: #36635f;
-  width: 110vw;
+  width: 100vw;
   height: 4rem;
   position: fixed;
   top: 0;
@@ -44,6 +44,10 @@ header {
   outline: none;
 }
 
+.menu-icon {
+  height: 2rem;
+}
+
 @media (orientation: portrait) {
   .header {
     justify-content: flex-end;
@@ -61,6 +65,5 @@ header {
   .app-title {
     font-size: 1.4rem;
     margin-top: 1rem;
-    /* left: 1rem; */
   }
 }
