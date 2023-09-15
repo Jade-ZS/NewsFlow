@@ -37,6 +37,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<ArticlesContainer articles={articles} />} />
+          {/* <Route path='?search' element={<ArticlesContainer articles={articles} />} /> */}
           <Route path=":id" element={<ArticleView articles={articles} />} />
         </Route>
         <Route path="*" element={<ErrorDisplay />} />

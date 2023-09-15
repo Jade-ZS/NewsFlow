@@ -1,7 +1,20 @@
 import "./Header.css";
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Header() {
+  const [searchInput, setSearchInput] = useState('');
+  const [, setSearchParam] = useSearchParams();
+  
+  const handleSearch = () => {
+    if (!searchInput.length) {
+      alert('This field cannot be empty');
+      return;
+    }
+    setSearchParam({'search': searchInput});
+    setSearchInput('');
+  }
+
   return (
     <header>
       <Link to='/'>
@@ -11,8 +24,10 @@ export default function Header() {
         <input
           className="search-input"
           placeholder="Search article by headline"
+          onChange={e => setSearchInput(e.target.value)}
+          value={searchInput}
         />
-        <button className="search-button">SEARCH</button>
+        <button className="search-button" onClick={handleSearch}>SEARCH</button>
       </div>
     </header>
   );
