@@ -83,4 +83,13 @@ header {
   .search-bar {
     display: none;
   }
+
+  .drop-down {
+    position: absolute;
+    top: 4rem;
+  }
+
+  .drop-down .search-bar {
+    display: block;
+  }
 }
