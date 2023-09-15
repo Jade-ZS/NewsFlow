@@ -1,9 +1,8 @@
 import "./Header.css";
 import { Link, useSearchParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Header() {
-  const {innerWidth: width, innerHeight: height} = window;
   const [searchInput, setSearchInput] = useState("");
   const [, setSearchParam] = useSearchParams();
   const [showSearchBar, setShowSearchBar] = useState(false);
