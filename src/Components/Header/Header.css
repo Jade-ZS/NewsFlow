@@ -87,6 +87,10 @@ header {
   .drop-down {
     position: absolute;
     top: 4rem;
+    left: 0;
+    background: #36635fe5;
+    padding: 1rem;
+    z-index: 3;
   }
 
   .drop-down .search-bar {
