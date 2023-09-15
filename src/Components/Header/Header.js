@@ -53,7 +53,7 @@ export default function Header() {
         onClick={handleMenu}
       />
       {searchBar}
-      {dropDown}
+      {showSearchBar && dropDown}
     </header>
   );
 }
