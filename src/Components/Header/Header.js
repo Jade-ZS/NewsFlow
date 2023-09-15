@@ -7,15 +7,6 @@ export default function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [, setSearchParam] = useSearchParams();
   const [showSearchBar, setShowSearchBar] = useState(false);
-  const [isPortrait, setIsPortrait] = useState(false);
-
-  useEffect(() => {
-    if (width < height) {
-      setIsPortrait(false)
-    } else {
-      setIsPortrait(true)
-    }
-  }, [width, height])
 
   const handleSearch = () => {
     if (!searchInput.length) {
@@ -57,7 +48,7 @@ export default function Header() {
       </Link>
       <img 
         className='menu-icon'
-        src={require("../../Assets/menu.png")} 
+        src={showSearchBar ? require("../../Assets/close.png") : require("../../Assets/menu.png")} 
         alt='menu'
         onClick={handleMenu}
       />
