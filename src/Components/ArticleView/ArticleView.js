@@ -22,7 +22,7 @@ export default function ArticleView({ articles }) {
           <h1 className="title">{title}</h1>
           <div className="writer-info">
             <p>By {author}</p>
-            <p>•</p>
+            <p className='divider'>•</p>
             <p>Published at {formatDate}</p>
           </div>
           <img src={urlToImage} alt="Cover" />

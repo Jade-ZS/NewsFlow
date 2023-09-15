@@ -70,5 +70,31 @@
   background:#36635f33;
 }
 
+@media (orientation: portrait) {
+  .blue-circle {
+    height: 50vh;
+    border-radius: 0;
+  }
 
+  .title {
+    font-size: 3vh;
+    width: 80vw;
+  }
+
+  .writer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+
+  .writer-info p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .divider {
+    display: none;
+  }
+}
 
