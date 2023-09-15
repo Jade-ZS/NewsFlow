@@ -1,0 +1,11 @@
+.error-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.error-display img{
+  border-radius: 40% 40% 50% 50% ;
+}
