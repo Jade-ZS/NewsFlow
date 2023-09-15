@@ -50,8 +50,14 @@ header {
 }
 
 @media (orientation: portrait) {
-  .header {
-    justify-content: flex-end;
+  header {
+    justify-content: space-between !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  header a {
+    text-decoration: none;
   }
 
   .search-bar {
@@ -65,11 +71,13 @@ header {
 
   .app-title {
     font-size: 1.4rem;
-    margin-top: 1rem;
+    position: static;
+    margin-left: 1rem;
   }
 
   .menu-icon {
     display: block;
+    margin-right: 3rem
   }
 
   .search-bar {
